@@ -1,0 +1,13 @@
+<div class="container my-5 d-flex justify-content-center">
+    <div class="p-4 w-50" style="border: 2px solid #D6D6D6;">
+        <h5 class=" text-primary my-3">Registration Form</h5>
+        <app-registration-form #registrationForm (onSubmitForm)="onRegisterUser($event)"></app-registration-form>
+        <button class="btn btn-danger w-100 my-4" type="submit" (click)="onSubmitForm()">Submit</button>
+    </div>
+</div>
+
+<div class=" container p-3">
+    <h6 class="text-uppercase mb-1">View Data:</h6>
+
+    <app-users></app-users>
+</div>

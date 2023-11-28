@@ -1,0 +1,12 @@
+<form [formGroup]="signupForm">
+    <input type="text" class=" form-control w-100 mb-3 py-3" avoidNumbers noSpecialCharacter [ngClass]="{'invalidInput' : isSubmitted && signupForm.get('name').invalid}" placeholder="Enter Name" formControlName="name">
+    <input type="text" class=" form-control w-100 mb-3 py-3" OnlyNumber [maxlength]="10" [ngClass]="{'invalidInput' : isSubmitted && signupForm.get('number').invalid}" placeholder="Enter Mobile number" formControlName="number">
+    <select class=" form-select w-100 mb-3 py-3" [ngClass]="{'invalidInput' : isSubmitted && signupForm.get('state').invalid}" formControlName="state" (change)="onSelectState()">
+        <option value="" disabled>Enter State</option>
+        <option *ngFor="let state of getStateNames()" [value]="state">{{ state }}</option>
+    </select>
+    <select class=" form-select w-100 mb-3 py-3" [ngClass]="{'invalidInput' : isSubmitted && signupForm.get('city').invalid}" formControlName="city" >
+        <option value="" disabled>Enter City</option>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+</form>

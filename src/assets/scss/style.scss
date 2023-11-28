@@ -1,0 +1,25 @@
+
+
+
+/**********************
+01.General
+
+***********************/
+
+
+@import "variables";
+
+@import 'general';
+
+
+body {
+  font-family: $font-primary !important;
+}
+
+
+
+// @import 'general';
+@import "helper"; 
+@import "components";
+@import "form";
+@import "faq";

@@ -1,0 +1,92 @@
+//
+// variables.scss
+//
+
+// google font
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url('/assets/fonts/eot/Poppins-Light.eot');
+  src: url('/assets/fonts/eot/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/woff2/Poppins-Light.woff2') format('woff2'),
+      url('/assets/fonts/woff/Poppins-Light.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('/assets/fonts/eot/Poppins-Bold.eot');
+  src: url('/assets/fonts/eot/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/woff2/Poppins-Bold.woff2') format('woff2'),
+      url('/assets/fonts/woff/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('/assets/fonts/eot/Poppins-Medium.eot');
+  src: url('/assets/fonts/eot/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/woff2/Poppins-Medium.woff2') format('woff2'),
+      url('/assets/fonts/woff/Poppins-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+// color variables
+$white:               #ffffff;
+$gray-100:            #f1f1f1;
+$gray-200:            #f2f2f2;
+$gray-300:            #ebebeb;
+$gray-400:            #eaebec;
+$gray-500:            #a7a9c0;
+$gray-600:            #b5b5c3;
+$gray-700:            #23252f;
+$gray-800:            #1f1b51;
+$gray-900:            #212529;
+$black:               #000000;
+
+
+
+$primary:       #333333 !default;
+$secondary:    #2063C0 !default;
+$success:             #27AE60;
+$info:                #7D7D7D;
+$warning:             #fbb70b;
+$danger:              #db504b;
+$dark:                #4F4F4F;
+$light:               #F9F9F9;
+$muted:               #BDBDBD;
+$darker:              #104C9E;
+// theme color
+$theme-colors:(
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "dark": $dark,
+        "light": $light,
+        "muted": $muted,
+        "darker": $darker,
+ );
+
+
+$body-bg: rgba(249, 249, 249, 1);
+
+
+// Font
+$font-primary:        'Poppins Regular';
+$font-secondary:      'Poppins Bold';
+$font-medium : 'Poppins Light';
+
+$border-radius: 12px;
+$border-radius-lg : 100px;

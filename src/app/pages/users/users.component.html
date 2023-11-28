@@ -1,0 +1,51 @@
+  <section class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataTable; index as i;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{data.name}}</td>
+            <td>{{data.number}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.state}}</td>
+            <td>
+                <div  class="d-flex">
+                    <!-- <a><i class="far fa-edit text-primary me-3"></i></a> -->
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="openEditModal(i)"><i class="far fa-user-pen text-success me-2 cursor-pointer"></i></a> |
+                    <a (click)="onDelete(data.id)"><i class="far fa-trash text-danger ms-2 cursor-pointer"></i></a> 
+                </div>
+            </td>
+          </tr>
+        </tbody>
+       
+       
+      </table>
+      <div *ngIf="dataTable?.length==0" class="text-center py-4 text-danger"><i class="far fa-exclamation-circle me-2"></i>No Data Found</div>  
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit User Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeModal></button>
+      </div>
+      <div class="modal-body">
+        <app-registration-form #registrationForm (onSubmitForm)="onEditUser($event)" [formData]="formData"></app-registration-form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-primary" type="submit" (click)="onSubmitForm()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
